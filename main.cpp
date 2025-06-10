@@ -3,6 +3,7 @@
 
 
 int main() {
+	// UsingtheLibraryof Raylib
 	Color grey = { 30,30,30,255 };
 	Color yellow = { 243,216,63,255 };
 	int offset = 50;
