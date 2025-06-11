@@ -16,12 +16,12 @@ public:
     Ship() {}
     virtual ~Ship() {}
 
-    // Pure virtual functions (must be implemented by derived classes)
+    // Pure virtual functions
     virtual void Draw() = 0;
     virtual void Update() = 0;
     virtual Rectangle getRect() = 0;
 
-    // Common functionality
+    
     Vector2 getPosition() { return position; }
     void setPosition(Vector2 pos) { position = pos; }
 };
