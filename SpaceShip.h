@@ -1,4 +1,4 @@
-// ========== SPACESHIP CLASS (inherits from Ship) ==========
+//SPACESHIP CLASS (inherits from Ship which is Base Class)
 #pragma once
 #include "raylib.h"
 #include "Laser.h"
