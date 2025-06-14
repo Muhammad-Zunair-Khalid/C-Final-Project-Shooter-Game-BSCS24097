@@ -1,4 +1,3 @@
-// ========== ALIEN CLASS (inherits from Ship) ==========
 #pragma once
 #include "raylib.h"
 #include "Ship.h"
@@ -11,8 +10,8 @@ public:
     Alien(int type, Vector2 position);
     ~Alien();
     void Update(int direction);
-    void Draw() override;           // Virtual function override
-    void Update() override;        // Virtual function override  
-    Rectangle getRect() override;  // Virtual function override
+    void Draw() override;           
+    void Update() override;         
+    Rectangle getRect() override;  
     int GetType();
 };
