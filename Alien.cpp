@@ -5,22 +5,22 @@ Alien::Alien(int type, Vector2 position) {
     this->position = position;
     switch (type) {
     case 1:
-        image = LoadTexture("EnemyShip.png");
+        image = LoadTexture("EnemyShip_1.png");
         break;
     case 2:
-        image = LoadTexture("EnemyShip.png");
+        image = LoadTexture("EnemyShip_2.png");
         break;
     case 3:
-        image = LoadTexture("EnemyShip.png");
+        image = LoadTexture("EnemyShip_3.png");
         break;
     default:
-        image = LoadTexture("EnemyShip.png");
+        image = LoadTexture("EnemyShip_1.png");
         break;
     }
 }
 
 Alien::~Alien() {
-   // UnloadTexture(image);
+    //UnloadTexture(image);
 }
 
 void Alien::Draw() {
@@ -42,4 +42,3 @@ int Alien::GetType() {
 Rectangle Alien::getRect() {
     return { position.x, position.y, float(image.width), float(image.height) };
 }
-
