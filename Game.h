@@ -1,5 +1,6 @@
 #pragma once
 #include "SpaceShip.h"
+#include "SpaceShip_1.h"
 #include "Obstacle.h"
 #include "Alien.h"
 #include "MysteryShip.h"
@@ -17,6 +18,7 @@ enum GameState {
 class Game {
 private:
     SpaceShip spaceship;
+    SpaceShip_1 spaceship_1;
     std::vector<Obstacle> obstacles;
     std::vector<Obstacle> CreateObstacles();
     std::vector<Alien> aliens;
@@ -37,9 +39,16 @@ private:
     void GameOver();
     void Reset();
     void InitGame();
-
+    void CheckForHighScore();
+    void saveHighScoreToFile(int highscore);
+    int loadHighScoreFromFile();
     void DrawShip(Ship* ship);
     void UpdateShip(Ship* ship);
+    Sound explosionSound;
+
+    void saveGame();
+    bool loadGame();
+    float gameStartTime;
 
 public:
     Game();
@@ -49,11 +58,12 @@ public:
     void HandleInput();
     bool run;
 
-    
+
     int score;
     int level;
     int lives;
+    int highscore;
     GameState currentState;
     int selectedMenuOption;
+    Music music;
 };
-
