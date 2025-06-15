@@ -1,4 +1,3 @@
-// ========== MYSTERY SHIP CLASS (inherits from Ship) ==========
 #pragma once
 #include "raylib.h"
 #include "Ship.h"
@@ -10,9 +9,9 @@ private:
 public:
     MysteryShip();
     ~MysteryShip();
-    void Draw() override;           // Virtual function override
-    void Update() override;        // Virtual function override
-    Rectangle getRect() override;  // Virtual function override
+    void Draw() override;           
+    void Update() override;        
+    Rectangle getRect() override;  
     void Spawn();
     bool alive;
 };
