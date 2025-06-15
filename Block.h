@@ -1,7 +1,6 @@
-// ========== BLOCK CLASS (unchanged) ==========
+
 #pragma once
 #include "raylib.h"
-
 class Block {
 public:
     Block(Vector2 position);
