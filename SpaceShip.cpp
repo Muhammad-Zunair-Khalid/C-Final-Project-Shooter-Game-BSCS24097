@@ -1,4 +1,3 @@
-//SpaceShip.cpp
 #include "SpaceShip.h"
 
 SpaceShip::SpaceShip() {
@@ -6,10 +5,12 @@ SpaceShip::SpaceShip() {
     position.x = (GetScreenWidth() - image.width) / 2;
     position.y = GetScreenHeight() - image.height;
     lastFireTime = 0.0;
+    lasersound = LoadSound("Sounds_laser.ogg");
 }
 
 SpaceShip::~SpaceShip() {
     UnloadTexture(image);
+    UnloadSound(lasersound);
 }
 
 void SpaceShip::Draw() {
@@ -17,7 +18,7 @@ void SpaceShip::Draw() {
 }
 
 void SpaceShip::Update() {
-    // Update lasers
+    
     for (auto& l : laser) {
         l.Update();
     }
@@ -41,6 +42,7 @@ void SpaceShip::FireLaser() {
     if (GetTime() - lastFireTime >= 0.35) {
         laser.push_back(Laser({ position.x + image.width / 2 - 2, position.y }, -6));
         lastFireTime = GetTime();
+        PlaySound(lasersound);
     }
 }
 
