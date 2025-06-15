@@ -1,4 +1,3 @@
-//SPACESHIP CLASS (inherits from Ship which is Base Class)
 #pragma once
 #include "raylib.h"
 #include "Laser.h"
@@ -10,13 +9,14 @@ using namespace std;
 class SpaceShip : public Ship {
 private:
     double lastFireTime;
+    Sound lasersound;
 
 public:
     SpaceShip();
     ~SpaceShip();
-    void Draw() override;           // Virtual function override
-    void Update() override;        // Virtual function override
-    Rectangle getRect() override;  // Virtual function override
+    void Draw() override;           
+    void Update() override;        
+    Rectangle getRect() override;  
     void MoveLeft();
     void MoveRight();
     void FireLaser();
