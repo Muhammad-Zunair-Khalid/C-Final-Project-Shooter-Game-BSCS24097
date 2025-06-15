@@ -1,8 +1,9 @@
-// ========== OBSTACLE CLASS (unchanged) ==========
+
 #pragma once
 #include <vector>
 #include "Block.h"
 #include "raylib.h"
+#include <iostream>
 using namespace std;
 
 class Obstacle {
